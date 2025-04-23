@@ -1,80 +1,64 @@
-# data-analysis-logistica
-Análisis logístico de entregas con Python, Pandas y visualización de datos en Google Colab. Este proyecto explora datos de entregas para identificar patrones de rendimiento, eficiencia y áreas de mejora. Ideal para demostrar habilidades en análisis de datos logísticos y optimización de procesos operacionales.
-Análisis Logístico de Entregas con Python y Machine Learning
-Este proyecto aborda el análisis de datos logísticos de entregas utilizando Python, Pandas y técnicas de Machine Learning en Google Colab. Se exploran datos de entregas para identificar patrones de rendimiento, eficiencia y áreas de mejora en los tiempos de entrega, con el objetivo de optimizar los procesos operacionales de una red de distribución logística.
+Proyecto Logístico de Entregas: Análisis y Predicción
+Este repositorio contiene dos proyectos de análisis logístico de entregas, enfocados en el análisis de datos y la predicción de tiempos de entrega mediante técnicas de Machine Learning. Ambos proyectos están orientados a mejorar la eficiencia operativa en el sector logístico, proporcionando tanto análisis descriptivo como soluciones predictivas.
 
-Objetivos del Proyecto
-Análisis exploratorio de datos: Análisis de los datos históricos de entregas para identificar factores que afectan los tiempos de entrega (como la distancia, el medio de transporte, el clima, etc.).
+Proyecto 1: Análisis Logístico de Entregas
+Objetivo: Este proyecto se centra en el análisis exploratorio de datos de entregas para identificar patrones de rendimiento, eficiencia y áreas de mejora en el proceso logístico.
 
-Modelo predictivo: Creación de un modelo de Machine Learning utilizando Random Forest para predecir los tiempos de entrega en función de diversas características.
+Enfoque
+Tecnologías: Python, Pandas, Matplotlib, Seaborn, Google Colab.
 
-Optimización de procesos: Utilización de los resultados del modelo para mejorar la eficiencia operativa y optimizar las rutas de entrega.
+Análisis: Se exploraron las variables de los datos como las distancias de entrega, los medios de transporte utilizados, el clima y otros factores operativos.
 
-Herramientas Utilizadas
-Python: Lenguaje de programación utilizado para el análisis de datos y desarrollo del modelo predictivo.
+Visualización: Utilizamos visualizaciones para identificar tendencias y anomalías en los datos, lo que permitió insights valiosos sobre la eficiencia de las entregas y la optimización de procesos.
 
-Pandas: Librería para el manejo de datos y análisis exploratorio.
+Estructura
+Código: Se encuentra en el archivo analisis_logistico_entregas.ipynb.
 
-Scikit-Learn: Librería para el modelado de Machine Learning (Random Forest).
+Objetivo del análisis: Identificar patrones y áreas de mejora en el rendimiento de las entregas logísticas.
 
-Google Colab: Entorno de desarrollo para ejecutar el código de manera interactiva en la nube.
+Proyecto 2: Predicción de Tiempos de Entrega con Machine Learning
+Objetivo: Este proyecto va un paso más allá, utilizando el análisis de datos junto con un modelo predictivo de Machine Learning para prever los tiempos de entrega, mejorando la toma de decisiones logísticas.
 
-Matplotlib / Seaborn: Librerías de visualización de datos para crear gráficos informativos.
+Enfoque
+Tecnologías: Python, Pandas, Scikit-learn, Random Forest, Google Colab.
 
-Descripción del Proyecto
-Preprocesamiento de Datos:
+Modelo Predictivo: Usamos el algoritmo Random Forest Regressor para predecir los tiempos de entrega, basándonos en variables como la distancia, el clima y el medio de transporte.
 
-Los datos fueron cargados desde un archivo CSV y limpiados para su uso en el análisis.
+Evaluación: El modelo se evaluó utilizando métricas como el MAE, RMSE y R², para asegurar su efectividad y precisión en las predicciones.
 
-Se crearon nuevas características, como el mes y el día de la semana en que se realizó el pedido, para mejorar la precisión de las predicciones.
+Estructura
+Código: Se encuentra en el archivo prediccion_entregas_logistica.ipynb.
 
-Se utilizó OneHotEncoder para transformar las variables categóricas (como el medio de transporte y el clima) en variables numéricas que el modelo puede procesar.
+Objetivo del análisis: Predecir los tiempos de entrega de manera más precisa utilizando Machine Learning.
 
-Análisis Exploratorio de Datos (EDA):
+Relación entre los proyectos
+Ambos proyectos están interrelacionados, ya que el segundo proyecto (Predicción de Tiempos de Entrega) toma los aprendizajes y datos del primer proyecto (Análisis Logístico de Entregas) y los usa para entrenar un modelo predictivo. El análisis inicial de los datos ayudó a identificar las variables más relevantes que fueron utilizadas en el modelo de Machine Learning.
 
-Se analizaron las distribuciones de las variables y se identificaron patrones y relaciones entre las características y los tiempos de entrega.
+Proyecto 1: Análisis exploratorio de datos.
 
-Se generaron visualizaciones para facilitar la comprensión de los datos y los factores que afectan los tiempos de entrega.
+Proyecto 2: Modelo predictivo basado en los datos analizados.
 
-Creación del Modelo Predictivo:
+Instrucciones
+1. Análisis Logístico de Entregas
+Abre el archivo analisis_logistico_entregas.ipynb en Google Colab.
 
-Se utilizó el algoritmo Random Forest, un modelo de Machine Learning basado en árboles de decisión, para predecir los tiempos de entrega.
+Ejecuta el código para visualizar los gráficos y obtener insights sobre los datos.
 
-El modelo fue entrenado y evaluado utilizando métricas como MAE (Error Absoluto Medio), RMSE (Raíz del Error Cuadrático Medio) y R² (Coeficiente de Determinación).
+Los resultados te ayudarán a identificar las áreas de mejora en el proceso logístico.
 
-Simulador de Predicción:
+2. Predicción de Tiempos de Entrega
+Abre el archivo prediccion_entregas_logistica.ipynb en Google Colab.
 
-Se implementó un simulador simple que permite predecir el tiempo de entrega de un pedido dado, basándose en las características de la entrega (distancia, medio de transporte, clima, etc.).
+Asegúrate de cargar el dataset y ejecutar el modelo para obtener las predicciones.
 
-Exportación del Modelo:
+Evalúa el rendimiento del modelo y sus métricas de error.
 
-El modelo entrenado fue exportado a un archivo .pkl utilizando joblib, lo que permite cargar el modelo en el futuro para realizar predicciones sin necesidad de reentrenarlo.
-
-Cómo Ejecutar el Proyecto
-Clona este repositorio:
-
-bash
-Copiar
-Editar
-git clone https://github.com/tu_usuario/tu_repositorio.git
-Instala las dependencias necesarias:
+Requisitos
+Para ejecutar estos proyectos localmente o en Google Colab, asegúrate de tener las siguientes librerías instaladas:
 
 bash
 Copiar
 Editar
-pip install -r requirements.txt
-Carga tu archivo CSV de datos en el formato adecuado.
-
-Ejecuta el script de análisis y entrenamiento:
-
-bash
-Copiar
-Editar
-python prediccion_entrega.py
-Puedes modificar las características del modelo y probar diferentes configuraciones.
-
-Conclusiones
-Este proyecto proporciona una herramienta útil para predecir los tiempos de entrega de manera precisa y eficiente, a través del análisis de los datos logísticos, el modelo puede ayudar a identificar cuellos de botella en las entregas y proponer soluciones basadas en datos para mejorar la eficiencia operativa.
-
-Contribuciones
-Este proyecto está abierto a contribuciones. Si tienes sugerencias o mejoras, siéntete libre de abrir un "issue" o realizar un "pull request".
+pip install pandas scikit-learn matplotlib seaborn
+Conclusión
+Este repositorio proporciona una solución completa que comienza con el análisis exploratorio de datos y termina con la creación de un modelo predictivo de Machine Learning, ambos proyectos son útiles para mejorar la eficiencia logística, prever tiempos de entrega y optimizar los recursos utilizados en el proceso de distribución.
